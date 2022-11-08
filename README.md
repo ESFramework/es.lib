@@ -49,7 +49,7 @@ This is a simple Library for FiveM works with esx and qbus and standalone.
 exports['es.lib']:showTextUi()
 ```
 ```Hide text ui 
-exports['es.lib']:HideTextUi()
+exports['es.lib']:hideTextUi()
 ```
 
 ### 🔗 Link
