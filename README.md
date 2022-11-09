@@ -9,7 +9,7 @@ This is a simple Library for FiveM works with esx and qbus and standalone.
 ### Features
 
 - This lib comes with highly config advance notification, text ui etc.
-- idle: 0.00ms, inuse: 0.00ms.
+- idle: 0.00ms, inuse: 0.01ms.
 
 ### WIP
 
@@ -23,6 +23,12 @@ This is a simple Library for FiveM works with esx and qbus and standalone.
 
 ### Notification
 
+#### Notify Type
+* success
+* info
+* warning
+* error
+* default
 #### Event Usage
 ```Event Usage
  TriggerEvent('es.lib:showNotify', "Title", "Message", Time, 'type')
@@ -43,16 +49,39 @@ This is a simple Library for FiveM works with esx and qbus and standalone.
  exports['es.lib']:Notify("none", "Message", Time, 'type')
 ```
 
-### Text UI WIP
+### Text UI 
+#### Text UI  Colour
+```White Theme
+    White Theme
+```
+* lightblue
+* darkblue
+* red
+* black
+* green
+* yellow
+* orange
+* cyan
+
+```Dark Theme
+    Dark Theme
+```
+* lightblue
+* darkblue
+* red
+* white
+* green
+* yellow
+* orange
+* cyan
 
 ```Show text ui 
-exports['es.lib']:showTextUi()
+exports['es.lib']:showTextUi("message", "position", "colour")
 ```
 ```Hide text ui 
 exports['es.lib']:hideTextUi()
 ```
 
 ### 🔗 Link
-
 For any support join
 [Discord](https://discord.gg/ZaTv6rfJ7F)

@@ -3,13 +3,14 @@ local function toggleNuiFrame(shouldShow)
     SendReactMessage('setVisible', shouldShow)
 end
   
-function TextUi(message, position, theme)
+function TextUi(message, position, colour)
     SendNUIMessage({
         action = 'open_textui',
         message = message,
-        theme = theme,
+        colour = colour,
         position = position,
         transition = Config.textUiTransition,
+        theme = Config.textUiTheme,
 	})
 end
 
@@ -19,17 +20,16 @@ function hideTextUi()
 	})
 end
 
-RegisterNetEvent('es.lib:showTextUi', function(message, position, theme)
-	TextUi(message, position, theme)
+RegisterNetEvent('es.lib:showTextUi', function(message, position, colour)
+	TextUi(message, position, colour)
 	toggleNuiFrame(true)
 end)  
 
-local function exportTextUi(message, position, theme)
-	TriggerEvent('es.lib:showTextUi', message, position, theme)
+local function exportTextUi(message, position, colour)
+	TriggerEvent('es.lib:showTextUi', message, position, colour)
 end
 
 RegisterNetEvent('es.lib:hideTextUi', function()
-    print('trigger')
     hideTextUi()
 end)  
 
@@ -37,14 +37,18 @@ exports("showTextUi", exportTextUi)
 
 exports("hideTextUi", hideTextUi)
 
-RegisterCommand('textui', function(message, position, theme) 
-    exports['es.lib']:showTextUi('This is a text ui', 'right', 'test')
-end)
+if Config.libDebug then
+    RegisterCommand('textui', function(message, position, colour) 
+        exports['es.lib']:showTextUi('This is a text ui', 'right', 'red')
+    end)
 
-RegisterCommand('textui2', function(message, position, theme) 
-    exports['es.lib']:showTextUi('This is a text ui', 'left', 'test')
-end)
+    RegisterCommand('textui2', function(message, position, colour) 
+        exports['es.lib']:showTextUi('This is a text ui', 'left', 'white')
+    end)
 
-RegisterCommand('hideText', function() 
-    TriggerEvent('es.lib:hideTextUi')
-end)
+    RegisterCommand('hideText', function() 
+        TriggerEvent('es.lib:hideTextUi')
+    end)
+end
+
+
