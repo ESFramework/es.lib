@@ -43,7 +43,7 @@ This is a simple Library for FiveM works with esx and qbus and standalone.
  exports['es.lib']:Notify("none", "Message", Time, 'type')
 ```
 
-### Text UI
+### Text UI WIP
 
 ```Show text ui 
 exports['es.lib']:showTextUi()
