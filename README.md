@@ -52,7 +52,7 @@ This is a simple Library for FiveM works with esx and qbus and standalone.
 ### Text UI 
 #### Text UI  Colour
 
-####White Theme
+###### White Theme
 
 * lightblue
 * darkblue
@@ -64,7 +64,7 @@ This is a simple Library for FiveM works with esx and qbus and standalone.
 * cyan
 
 
-####Dark Theme
+###### Dark Theme
 
 * lightblue
 * darkblue
