@@ -35,7 +35,7 @@ end)
 
 exports("showTextUi", exportTextUi)
 
-exports("hideTextUi", HideTextUi)
+exports("hideTextUi", hideTextUi)
 
 RegisterCommand('textui', function(message, position, theme) 
     exports['es.lib']:showTextUi('This is a text ui', 'right', 'test')
