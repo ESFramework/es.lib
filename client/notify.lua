@@ -22,6 +22,7 @@ RegisterNetEvent('es.lib:showNotify', function(title, message, time, type)
 	toggleNuiFrame(true)
 end)  
 
+
 local function exportNotify(title, message, time, type)
 	TriggerEvent('es.lib:showNotify', title, message, time, type)
 end
@@ -50,6 +51,6 @@ if Config.libDebug then
 	end)
 
 	RegisterCommand('WithoutTitle', function() 
-		TriggerEvent('es.lib:showNotify',"none", "this is without title", 3000, 'error')
+		TriggerEvent('es.lib:showNotify', "none", "this is without title", 3000, 'error')
 	end)
 end
