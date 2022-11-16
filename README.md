@@ -81,7 +81,6 @@ exports['es.lib']:showTextUi("message", "position", "colour")
 ```Hide text ui 
 exports['es.lib']:hideTextUi()
 ```
-
 ### 🔗 Link
-For any support join
+For any support & Snippet join
 [Discord](https://discord.gg/ZaTv6rfJ7F)
