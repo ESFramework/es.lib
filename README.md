@@ -31,22 +31,22 @@ This is a simple Library for FiveM works with esx and qbus and standalone.
 * default
 #### Event Usage
 ```Event Usage
- TriggerEvent('es.lib:showNotify', "Title", "Message", Time, 'type')
+ TriggerEvent('es.lib:showNotify', "Title", "Icon", "Message", Time, 'type')
 ```
 
 ###### Event Usage without Title
 ```Event Usage
- TriggerEvent('es.lib:showNotify', "none", "Message", Time, 'type')
+ TriggerEvent('es.lib:showNotify', "none", "noicon", "Message", Time, 'type')
 ```
 
 #### Export Usage
 ```Export Usage
- exports['es.lib']:Notify("Title", "Message", Time, 'type')
+ exports['es.lib']:Notify("Title","Icon", "Message", Time, 'type')
 ```
 
 ###### Export Usage without Title
 ```Export Usage
- exports['es.lib']:Notify("none", "Message", Time, 'type')
+ exports['es.lib']:Notify("none", "noicon", "Message", Time, 'type')
 ```
 
 ### Text UI 
