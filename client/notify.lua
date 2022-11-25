@@ -15,6 +15,7 @@ function Notify(title, icon, message, time, type)
 		position = Config.notifyPostion,
 		transition = Config.notifyTransition,
 		progressbar = Config.hideProgressBar,
+		rtl = Config.rtl,
 	})
 end
 
