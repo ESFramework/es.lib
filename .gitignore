@@ -1,2 +1,4 @@
 .idea
 web/node_modules/
+web/build/
+web/src/components/Progressbar/
