@@ -7,5 +7,5 @@ Config.notifyTransition = "bounce" --// "bounce", "slide", "zoom", "flip", "popu
 Config.hideProgressBar = false --// Hide ProgressBar
 Config.rtl = false --// Right to left support
 
-Config.textUiTransition = "bounce" --// "bounce", "slide"
+Config.textUiTransition = "slide" --// "bounce", "slide"
 Config.textUiTheme = "white" --// "white", "dark"

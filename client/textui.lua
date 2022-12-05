@@ -31,7 +31,7 @@ if Config.libDebug then
     end)
 
     RegisterCommand('textui2', function(message, position, colour) 
-        exports['es.lib']:showTextUi('This is a text ui', 'left', 'white')
+        exports['es.lib']:showTextUi('This is a text ui', 'left', 'black')
     end)
 
     RegisterCommand('hideText', function() 
