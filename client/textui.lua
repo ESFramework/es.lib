@@ -35,7 +35,7 @@ if Config.libDebug then
     end)
 
     RegisterCommand('hideText', function() 
-        TriggerEvent('es.lib:hideTextUi')
+        exports['es.lib']:hideTextUi()
     end)
 end
 
