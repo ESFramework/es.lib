@@ -3,7 +3,14 @@ local function toggleNuiFrame(shouldShow)
   SendReactMessage('setVisible', shouldShow)
 end
 
+---@param title string
+---@param icon any Icons
+---@param message string Any Message you want to show
+---@param time number value
+---@param type success, info, warning, error, default
+
 function Notify(title, icon, message, time, type)
+	toggleNuiFrame(true)
 	SendNUIMessage({
 		action = 'open_notify',
 		title = title,
@@ -19,17 +26,8 @@ function Notify(title, icon, message, time, type)
 	})
 end
 
-RegisterNetEvent('es.lib:showNotify', function(title, icon, message, time, type)
-	Notify(title, icon, message, time, type)
-	toggleNuiFrame(true)
-end)
-
-
-local function exportNotify(title, icon, message, time, type)
-	TriggerEvent('es.lib:showNotify', title, icon, message, time, type)
-end
-
-exports("Notify", exportNotify)
+exports("Notify", Notify)
+RegisterNetEvent("es.lib:showNotify", Notify)
 
 if Config.libDebug then
 	RegisterCommand('info', function() 

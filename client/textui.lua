@@ -4,6 +4,7 @@ local function toggleNuiFrame(shouldShow)
 end
   
 function TextUi(message, position, colour)
+    toggleNuiFrame(true)
     SendNUIMessage({
         action = 'open_textui',
         message = message,
@@ -20,20 +21,7 @@ function hideTextUi()
 	})
 end
 
-RegisterNetEvent('es.lib:showTextUi', function(message, position, colour)
-	TextUi(message, position, colour)
-	toggleNuiFrame(true)
-end)  
-
-local function exportTextUi(message, position, colour)
-	TriggerEvent('es.lib:showTextUi', message, position, colour)
-end
-
-RegisterNetEvent('es.lib:hideTextUi', function()
-    hideTextUi()
-end)  
-
-exports("showTextUi", exportTextUi)
+exports("showTextUi", TextUi)
 
 exports("hideTextUi", hideTextUi)
 
