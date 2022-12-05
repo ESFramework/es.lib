@@ -19,13 +19,13 @@ const TextUi = () => {
     let location = '';
     let anim = '';
     window.addEventListener('message', function(event) {
-
-        if (event.data.action == 'open_textui') { 
-            let position =  event.data.position;
-            let message = event.data.message;
-            let transition = event.data.transition;
-            let theme = event.data.theme;
-            let colour = event.data.colour;
+        let data = event.data
+        if (data.action == 'open_textui') { 
+            let position =  data.position;
+            let message = data.message;
+            let transition = data.transition;
+            let theme = data.theme;
+            let colour = data.colour;
             $('#txtmessage').html(message);
             console.log('show');
             
@@ -34,18 +34,18 @@ const TextUi = () => {
                 if (transition == 'slide') {
                     $('#TextUi').css('left', '');
                     $('#TextUi').css('right', '1%');
-                    $('#TextUi').removeClass('hideright');
-                    $('#TextUi').removeClass('showleft');
+                    $('#TextUi').removeClass('slide-out-right');
+                    $('#TextUi').removeClass('slide-in-left');
                     $('#TextUi').removeClass('bounce-in-right');
                     $('#TextUi').removeClass('bounce-out-right');
-                    $('#TextUi').addClass('showright');
+                    $('#TextUi').addClass('slide-in-right');
                     location = 'right';
                     anim = 'slide';
                 } else if (transition == 'bounce') {
                     $('#TextUi').css('left', '');
                     $('#TextUi').css('right', '1%');
-                    $('#TextUi').removeClass('hideright');
-                    $('#TextUi').removeClass('showright');
+                    $('#TextUi').removeClass('slide-out-right');
+                    $('#TextUi').removeClass('slide-in-right');
                     $('#TextUi').removeClass('bounce-in-left');
                     $('#TextUi').removeClass('bounce-out-left');
                     $('#TextUi').removeClass('bounce-out-right');
@@ -60,19 +60,19 @@ const TextUi = () => {
                 if (transition == 'slide') {
                     $('#TextUi').css('right', '');
                     $('#TextUi').css('left', '1%');
-                    $('#TextUi').removeClass('hideleft');
-                    $('#TextUi').removeClass('showright');
-                    $('#TextUi').removeClass('hideright');
+                    $('#TextUi').removeClass('slide-out-left');
+                    $('#TextUi').removeClass('slide-in-right');
+                    $('#TextUi').removeClass('slide-out-right');
                     $('#TextUi').removeClass('bounce-in-left');
                     $('#TextUi').removeClass('bounce-out-left');
-                    $('#TextUi').addClass('showleft');
+                    $('#TextUi').addClass('slide-in-left');
                     location = 'left';
                     anim = 'slide';
                 } else if (transition == 'bounce') {
                     $('#TextUi').css('right', '');
                     $('#TextUi').css('left', '1%');
-                    $('#TextUi').removeClass('hideleft');
-                    $('#TextUi').removeClass('showleft');
+                    $('#TextUi').removeClass('slide-out-left');
+                    $('#TextUi').removeClass('slide-in-left');
                     $('#TextUi').removeClass('bounce-out-left');
                     $('#TextUi').removeClass('bounce-in-right');
                     $('#TextUi').removeClass('bounce-out-right');
@@ -168,25 +168,25 @@ const TextUi = () => {
                 }
             }
 
-        } else if (event.data.action == 'hidetextui') {
+        } else if (data.action == 'hidetextui') {
             if (location == 'left') {
                 if (anim == 'slide') {
-                    $('#TextUi').removeClass('hideright');
-                    $('#TextUi').removeClass('showright');  
+                    $('#TextUi').removeClass('slide-out-right');
+                    $('#TextUi').removeClass('slide-in-right');  
                     $('#TextUi').removeClass('bounce-in-left');
                     $('#TextUi').removeClass('bounce-out-left');
                     $('#TextUi').removeClass('bounce-in-right');
                     $('#TextUi').removeClass('bounce-out-right');
-                    $('#TextUi').removeClass('showleft');
-                    $('#TextUi').addClass('hideleft');
+                    $('#TextUi').removeClass('slide-in-left');
+                    $('#TextUi').addClass('slide-out-left');
                     location = '';
                     anim = '';
                     console.log('hide slide');
                 } else if (anim == 'bounce') {
-                    $('#TextUi').removeClass('hideright');
-                    $('#TextUi').removeClass('showright');
-                    $('#TextUi').removeClass('hideleft');
-                    $('#TextUi').removeClass('showleft');
+                    $('#TextUi').removeClass('slide-out-right');
+                    $('#TextUi').removeClass('slide-in-right');
+                    $('#TextUi').removeClass('slide-out-left');
+                    $('#TextUi').removeClass('slide-in-left');
                     $('#TextUi').removeClass('bounce-out-right');
                     $('#TextUi').removeClass('bounce-in-right');
                     $('#TextUi').removeClass('bounce-in-left');
@@ -198,22 +198,22 @@ const TextUi = () => {
             }
             if (location == 'right') {
                 if (anim == 'slide') {
-                    $('#TextUi').removeClass('hideleft');
-                    $('#TextUi').removeClass('showleft');  
+                    $('#TextUi').removeClass('slide-out-left');
+                    $('#TextUi').removeClass('slide-in-left');  
                     $('#TextUi').removeClass('bounce-out-left');
                     $('#TextUi').removeClass('bounce-in-left');
                     $('#TextUi').removeClass('bounce-in-right');
                     $('#TextUi').removeClass('bounce-out-right');
-                    $('#TextUi').removeClass('showright');
-                    $('#TextUi').addClass('hideright');
+                    $('#TextUi').removeClass('slide-in-right');
+                    $('#TextUi').addClass('slide-out-right');
                     location = '';
                     anim = '';
                     console.log('hide slide');
                 } else if (anim == 'bounce') {
-                    $('#TextUi').removeClass('hideleft');
-                    $('#TextUi').removeClass('showleft');
-                    $('#TextUi').removeClass('hideright');
-                    $('#TextUi').removeClass('showright');
+                    $('#TextUi').removeClass('slide-out-left');
+                    $('#TextUi').removeClass('slide-in-left');
+                    $('#TextUi').removeClass('slide-out-right');
+                    $('#TextUi').removeClass('slide-in-right');
                     $('#TextUi').removeClass('bounce-in-left');
                     $('#TextUi').removeClass('bounce-out-left');
                     $('#TextUi').removeClass('bounce-in-right');

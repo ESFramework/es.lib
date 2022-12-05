@@ -1,7 +1,7 @@
-import { toast } from "react-toastify";
+// import { toast } from "react-toastify";
 import {debugData} from "../utils/debugData";
 import Notify from './Notify/Notify';
-import Progressbar from "./Progressbar/Progressbar";
+// import Progressbar from "./Progressbar/Progressbar";
 //  import { TestUIRight, TestUIHideRight, TestUILeft, TestUIHideLeftt } from "./TextUI/test";
 import TextUi from "./TextUI/TextUi";
 
@@ -16,24 +16,24 @@ debugData([
 ])
 
 function App() {
-  const msg = (
-    <div>
-      <h1 className='Title'></h1>
-      <span className='Text'>What’s the word for breaking a sweat when you fill out your name?</span>
-    </div>
-  )
-  const notify = () => toast(msg, {
-    position: "top-right",
-    autoClose: 5000,
-    hideProgressBar: false,
-    closeOnClick: true,
-    pauseOnHover: true,
-    pauseOnFocusLoss: true,
-    draggable: true,
-    progress: undefined,
+  // const msg = (
+  //   <div>
+  //     <h1 className='Title'></h1>
+  //     <span className='Text'>What’s the word for breaking a sweat when you fill out your name?</span>
+  //   </div>
+  // )
+  // const notify = () => toast(msg, {
+  //   position: "top-right",
+  //   autoClose: 5000,
+  //   hideProgressBar: false,
+  //   closeOnClick: true,
+  //   pauseOnHover: true,
+  //   pauseOnFocusLoss: true,
+  //   draggable: true,
+  //   progress: undefined,
 
-    theme: "light",
-    });
+  //   theme: "light",
+  //   });
   return (
     <div>
       {/* <button onClick={TestUILeft}>left</button>

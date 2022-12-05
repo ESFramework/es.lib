@@ -8,11 +8,11 @@ export function TestUIRight (){
 	$('#txtmessage').html(message);
     $('#TextUi').css('left', '');
     $('#TextUi').css('right', '1%');
-    $('#TextUi').removeClass('hideright');
+    $('#TextUi').removeClass('slide-out-right');
     $('#TextUi').removeClass('showleft');
     $('#TextUi').removeClass('bounce-in-right');
     $('#TextUi').removeClass('bounce-out-right');
-    $('#TextUi').addClass('showright');
+    $('#TextUi').addClass('slide-in-right');
     removeClass();
 	$('#mainUI').addClass('lightblue-icon');
 	$('#UiComponent').addClass('lightblue lightblue-border');
@@ -25,8 +25,8 @@ export function TestUIHideRight() {
     $('#TextUi').removeClass('bounce-in-left');
     $('#TextUi').removeClass('bounce-in-right');
     $('#TextUi').removeClass('bounce-out-right');
-    $('#TextUi').removeClass('showright');
-    $('#TextUi').addClass('hideright');
+    $('#TextUi').removeClass('slide-in-right');
+    $('#TextUi').addClass('slide-out-right');
     // setTimeout(() => {
     //     $('#TextUi').css('right', '-100%');
     // }, 10000);
@@ -37,12 +37,12 @@ export function TestUILeft (){
     $('#txtmessage').html(message);
     $('#TextUi').css('right', '');
     $('#TextUi').css('left', '1%');
-    $('#TextUi').removeClass('hideleft');
+    $('#TextUi').removeClass('slide-out-left');
     $('#TextUi').removeClass('showright');
     $('#TextUi').removeClass('hideright');
     $('#TextUi').removeClass('bounce-in-left');
     $('#TextUi').removeClass('bounce-out-left');
-    $('#TextUi').addClass('showleft');
+    $('#TextUi').addClass('slide-in-left');
     removeClass();
 
 	$('#mainUI').addClass('cyan-icon');
@@ -57,8 +57,8 @@ export function TestUIHideLeftt() {
     $('#TextUi').removeClass('bounce-out-left');
     $('#TextUi').removeClass('bounce-in-right');
     $('#TextUi').removeClass('bounce-out-right');
-    $('#TextUi').removeClass('showleft');
-    $('#TextUi').addClass('hideleft');
+    $('#TextUi').removeClass('slide-in-left');
+    $('#TextUi').addClass('slide-out-left');
     // setTimeout(() => {
     //     $('#TextUi').css('right', '-100%');
     // }, 10000);
