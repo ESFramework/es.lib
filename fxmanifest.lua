@@ -2,7 +2,7 @@ fx_version "cerulean"
 
 description "Basic Lua libery with all advance feature"
 author "ES Framework"
-version '1.2.1'
+version '2.2.2'
 repository 'https://github.com/ESFramework/es.lib'
 
 lua54 'yes'
